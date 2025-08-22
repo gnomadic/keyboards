@@ -38,6 +38,14 @@ include:
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     artifact-name: lily58_dongle
 
+  # DEBUG
+  - board: seeeduino_xiao_ble
+    shield: lily58_dongle
+    snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    artifact-name: lily58_dongle_Debug
+
+
 
 
 
