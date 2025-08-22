@@ -2,7 +2,7 @@ file_format: "1"
 id: lily58
 name: lily58
 type: shield
-url: https://github.com/foostan/crkbd/
+url: https://github.com/gnomadic/keyboards/
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
@@ -10,5 +10,5 @@ features:
   - display
   - encoder
 siblings:
-  - corne_left
-  - corne_right
+  - lily58_left
+  - lily58_right
