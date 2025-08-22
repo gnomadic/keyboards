@@ -8,19 +8,9 @@
 #include <layouts/kata0510/lily58.dtsi>
 
 / {
+
     chosen {
         zmk,kscan = &mock_kscan;
-    };
-
-    mock_kscan: mock_kscan_0 {
-        compatible = "zmk,kscan-mock";
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
-    };
-
-    chosen {
-        zmk,kscan = &kscan0;
         zmk,physical-layout = &kata0510_lily58_layout;
     };
 
