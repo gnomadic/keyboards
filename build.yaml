@@ -28,7 +28,7 @@ include:
 
   # # Xiao_Dongle Round
   - board: seeeduino_xiao_ble
-    shield: lily58_dongle_xiao seeed_xiao_round_display dongle_display
+    shield: lily58_dongle_xiao st7789v_waveshare_240x240 dongle_display
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"lily58Dongle_X\" -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
     artifact-name: xiao_lily58_dongle_xiao_round_oled
     snippet: studio-rpc-usb-uart
