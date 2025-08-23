@@ -92,10 +92,24 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         compatible = "sitronix,st7789v";
         reg = <0>;                         /* CS index */
         spi-max-frequency = <8000000>;
-        reset-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>; /* adjust pins */
-        dc-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
+
+        // Required offsets
+        x-offset = <0>;
+        y-offset = <0>;
+
+        // Panel size
         width = <240>;
         height = <240>;
+
+        // Optional: adjust if your display needs it
+        rotation = <0>;             // can be 0, 90, 180, 270
+        rgb-order = "bgr";          // or "rgb" depending on panel
+
+   
+        cs-gpios = <&gpio0 21 GPIO_ACTIVE_LOW>;   /* D6 = CS */
+        dc-gpios = <&gpio0 23 GPIO_ACTIVE_HIGH>;  /* D5 = DC */
+        reset-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>; /* D2 = RST */
+        bl-gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>;  /* D9 = BLK */
     };
 };
 
