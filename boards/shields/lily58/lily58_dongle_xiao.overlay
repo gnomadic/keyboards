@@ -117,7 +117,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         vrh-param = <0x0B>;
         vdv-param = <0x20>;
         frame-param = <0x0F 0x3C 0x3C>;
-        power-param = <0xA4 A1>; /* depends on your panel */
+        power-param = <0xA4 0xA1>; /* depends on your panel */
         pvgamma-param = <0xD0 0x08 ... >; /* long gamma curves */
         nvgamma-param = <0xD0 0x08 ... >;
     };
