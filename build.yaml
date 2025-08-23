@@ -5,16 +5,39 @@
 # pass flags to the build command, `snippet` to add a Zephyr snippet, and
 # `artifact-name` to assign a name to distinguish build outputs from each other:
 #
-# board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
-#   - board: nice_nano_v2
-#     shield: corne_left
-#     snippet: studio-rpc-usb-uart
-#     cmake-args: -DCONFIG_ZMK_STUDIO=y
-#     artifact-name: corne_left_with_studio
-#
+
 ---
+include:
+  # ### LILY58 with dongle and nice!view!
+  # Boards
+  - board: nice_nano_v2
+    shield: lily58_left_peripheral nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: lily58_left_niceview
+  - board: nice_nano_v2
+    shield: lily58_right nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: lily58_right_niceview
+
+  # # Xiao_Dongle
+  # - board: seeeduino_xiao_ble
+  #   shield: lily58_dongle_xiao oled_adapter_seeeduino_xiao_ble_128x64 dongle_display
+  #   cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"lily58Dongle_X\" -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+  #   artifact-name: xiao_lily58_dongle_xiao
+  #   snippet: studio-rpc-usb-uart
+
+  # # Xiao_Dongle Round
+  - board: seeeduino_xiao_ble
+    shield: lily58_dongle_xiao dongle_display
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"lily58Dongle_X\" -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    artifact-name: xiao_lily58_dongle_xiao_round_oled
+    snippet: studio-rpc-usb-uart
+    
+  # ### SETTINGS_RESET START ###
+  - board: nice_nano_v2
+    shield: settings_reset
+    artifact-name: nice_settings_reset
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+    artifact-name: xiao_settings_reset
+  # ### SETTINGS_RESET END ###
