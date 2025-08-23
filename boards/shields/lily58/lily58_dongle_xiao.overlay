@@ -90,16 +90,27 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
 
     st7789v@0 {
         compatible = "sitronix,st7789v";
-        cs-gpios = <&xiao_d 6 GPIO_ACTIVE_HIGH>;  // CS pin
-        dc-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;  // DC pin
-        reset-gpios = <&xiao_d 8 GPIO_ACTIVE_HIGH>; // RESET pin
-        vcom = <0x08>;      // VCOM pin required
+        reg = <0>;
+        spi-max-frequency = <8000000>;
+        cs-gpios = <&xiao_d 6 GPIO_ACTIVE_HIGH>;
+        dc-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
+        reset-gpios = <&xiao_d 8 GPIO_ACTIVE_HIGH>;
+
         width = <240>;
         height = <240>;
         x-offset = <0>;
         y-offset = <0>;
         rotation = <0>;
-        bus-speed = <8000000>;
+
+        /* Required properties */
+        gctrl = <0x30>;
+        vcom = <0x08>;
+        lcm = <0x0A>;
+        gamma = <0x01>;
+
+        /* Porch and power params (example values from Waveshare configs) */
+        porch-param = <0x0C 0x0C 0x00 0x33 0x33>;
+        cmd2en-param = <0x5A 0x69>;
     };
 };
 
