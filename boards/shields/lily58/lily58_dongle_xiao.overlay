@@ -102,15 +102,24 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         y-offset = <0>;
         rotation = <0>;
 
-        /* Required properties */
-        gctrl = <0x30>;
+       gctrl = <0x30>;
         vcom = <0x08>;
         lcm = <0x0A>;
         gamma = <0x01>;
-
-        /* Porch and power params (example values from Waveshare configs) */
         porch-param = <0x0C 0x0C 0x00 0x33 0x33>;
         cmd2en-param = <0x5A 0x69>;
+        mdac = <0x00>;       /* Memory Data Access Control */
+        colmod-param = <0x05>; /* Interface pixel format = 16-bit/pixel */
+        ram-param = <0x00>;   /* RAM control */
+        rgb-param = <0x60 0x01>;
+        ctrl-param = <0x01>;
+        vdv-vrh-en-param = <0x01>;
+        vrh-param = <0x0B>;
+        vdv-param = <0x20>;
+        frame-param = <0x0F 0x3C 0x3C>;
+        power-param = <0xA4 A1>; /* depends on your panel */
+        pvgamma-param = <0xD0 0x08 ... >; /* long gamma curves */
+        nvgamma-param = <0xD0 0x08 ... >;
     };
 };
 
