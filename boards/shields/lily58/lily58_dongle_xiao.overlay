@@ -16,7 +16,7 @@
     };
 
     aliases {
-        arduino-spi = &spi0;    /* 👈 Add this alias */
+        arduinospi = &spi0;    /* 👈 Add this alias */
     };
 
     default_transform: keymap_transform_0 {
