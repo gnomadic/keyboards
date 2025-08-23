@@ -93,7 +93,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         cs-gpios = <&xiao_d 6 GPIO_ACTIVE_HIGH>;  // CS pin
         dc-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;  // DC pin
         reset-gpios = <&xiao_d 8 GPIO_ACTIVE_HIGH>; // RESET pin
-        vcom = <&xiao_d 9 GPIO_ACTIVE_HIGH>;      // VCOM pin required
+        vcom = <0x08>;      // VCOM pin required
         width = <240>;
         height = <240>;
         x-offset = <0>;
