@@ -81,48 +81,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
     };
 };
 
-&spi0 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-
-    st7789v@0 {
-        compatible = "sitronix,st7789v";
-        reg = <0>;
-        spi-max-frequency = <8000000>;
-        cs-gpios = <&xiao_d 6 GPIO_ACTIVE_HIGH>;
-        dc-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
-        reset-gpios = <&xiao_d 8 GPIO_ACTIVE_HIGH>;
-
-        width = <240>;
-        height = <240>;
-        x-offset = <0>;
-        y-offset = <0>;
-        rotation = <0>;
-
-       gctrl = <0x30>;
-        vcom = <0x08>;
-        lcm = <0x0A>;
-        gamma = <0x01>;
-        porch-param = <0x0C 0x0C 0x00 0x33 0x33>;
-        cmd2en-param = <0x5A 0x69>;
-        mdac = <0x00>;       /* Memory Data Access Control */
-        colmod-param = <0x05>; /* Interface pixel format = 16-bit/pixel */
-        ram-param = <0x00>;   /* RAM control */
-        rgb-param = <0x60 0x01>;
-        ctrl-param = <0x01>;
-        vdv-vrh-en-param = <0x01>;
-        vrh-param = <0x0B>;
-        vdv-param = <0x20>;
-        frame-param = <0x0F 0x3C 0x3C>;
-        power-param = <0xA4 0xA1>; /* depends on your panel */
-        pvgamma-param = <0xD0 0x08 ... >; /* long gamma curves */
-        nvgamma-param = <0xD0 0x08 ... >;
-    };
-};
-
 &xiao_i2c {
     status = "okay";
 
