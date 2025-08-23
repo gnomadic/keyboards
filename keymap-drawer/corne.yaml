@@ -1,0 +1,224 @@
+layout: {zmk_keyboard: corne}
+layers:
+  Base:
+  - ↹
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - DELETE
+  - $$mdi:apple-keyboard-control$$
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - {t: '''', h: ;}
+  - ''''
+  - LEFT SHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', h: 'Sft+,'}
+  - {t: ., h: Sft+.}
+  - {t: /, h: Sft+/}
+  - RIGHT SHIFT
+  - {t: Esc, h: LEFT GUI}
+  - {t: LEFT SHIFT, h: NumSym}
+  - ␣
+  - {t: ENTER, h: Func}
+  - {t: BACKSPACE, h: Nav}
+  - {t: ⌦, h: RIGHT ALT}
+  NumSym:
+  - {t: ▽, type: trans}
+  - Sft+1
+  - Sft+2
+  - Sft+3
+  - Sft+4
+  - {t: '`', h: Sft+`}
+  - '*'
+  - '7'
+  - '8'
+  - '9'
+  - {t: '-', h: Sft+-}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+5
+  - Sft+6
+  - Sft+7
+  - {t: \, h: Sft+\}
+  - {t: ▽, type: trans}
+  - /
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+9
+  - Sft+0
+  - {t: '[', h: 'Sft+['}
+  - {t: ']', h: 'Sft+]'}
+  - {t: ▽, type: trans}
+  - ','
+  - '1'
+  - '2'
+  - '3'
+  - '='
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - .
+  Nav:
+  - ''
+  - '`'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - PAGE UP
+  - UP ARROW
+  - PAGE DOWN
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Home
+  - LEFT ARROW
+  - DOWN ARROW
+  - →
+  - End
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: BACKSPACE, type: held}
+  - ⌦
+  Mouse: ['', '', '', '&msc SCRL_UP', '', '', '', '', '&mmv MOVE_UP', '', '', '', '', '', '&msc SCRL_LEFT', '&msc SCRL_DOWN', '&msc SCRL_RIGHT', '', '', '&mmv MOVE_LEFT',
+    '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '', '', '', '', '&mkp RCLK', '&mkp MCLK', '&mkp LCLK', '', '', '', '', '', '', '', '', '', '', '', '', '']
+  Func:
+  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - ''
+  - ⏮️
+  - PLAY PAUSE
+  - ⏭️
+  - MUTE
+  - Vol Down
+  - VOLUME UP
+  - ''
+  - F5
+  - F6
+  - F7
+  - F8
+  - Ctl+Alt+DELETE
+  - BRIGHTNESS DEC
+  - BRI UP
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F9
+  - F10
+  - F11
+  - F12
+  - PRINTSCREEN
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - bluetooth
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  bluetooth:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BT PRV
+  - BT NXT
+  - {t: ▽, type: trans}
+  - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [24, 35]
+  k: CAPSLOCK
+- p: [37, 40]
+  k: Caps Word
