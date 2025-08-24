@@ -15,10 +15,6 @@
         zmk,physical-layout = &kata0510_lily58_layout;
     };
 
-    aliases {
-        arduinospi = &spi0;
-    };
-
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <16>;
@@ -63,24 +59,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
     transform = <&default_transform>;
 };
 
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,   /* D8 */
-                    <NRF_PSEL(SPIM_MOSI, 1, 15)>,  /* D10 */
-                    <NRF_PSEL(SPIM_MISO, 1, 14)>;  /* D9 */
-        };
-    };
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
-                    <NRF_PSEL(SPIM_MOSI, 1, 15)>,
-                    <NRF_PSEL(SPIM_MISO, 1, 14)>;
-            low-power-enable;
-        };
-    };
-};
-
 &xiao_i2c {
     status = "okay";
 
@@ -97,25 +75,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         com-invdir;
         inversion-on;
         prechargep = <0x22>;
-    };
-};
-
-&spi0 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-
-    /* --- 👇 Place your display node(s) here --- */
-    st7789v@0 {
-        compatible = "sitronix,st7789v";
-        reg = <0>;                         /* CS index */
-        spi-max-frequency = <8000000>;
-        reset-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>; /* adjust pins */
-        dc-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
-        width = <240>;
-        height = <240>;
     };
 };
 
