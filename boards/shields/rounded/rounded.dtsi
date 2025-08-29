@@ -104,7 +104,7 @@
         
         // Control pins
         reset-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;   // D5 - RST
-        dc-gpios = <&gpio0 4 GPIO_ACTIVE_HIGH>;     // D4 - DC
+        cmd-data-gpios = <&gpio0 4 GPIO_ACTIVE_HIGH>;     // D4 - DC
         
         // Display specifications
         width = <240>;
