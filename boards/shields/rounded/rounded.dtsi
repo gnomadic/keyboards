@@ -117,9 +117,6 @@
         x-offset = <0>;
         y-offset = <0>;
         
-        // Rotation (adjust as needed for your mounting)
-        rotation = <0>; // 0, 90, 180, or 270
-        
         // Backlight reference (disabled for now)
         // backlight = <&backlight>;
 
