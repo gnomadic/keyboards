@@ -114,6 +114,9 @@
         
         // Backlight reference
         backlight = <&backlight>;
+
+        vcom = <0x19>;  // VCOM setting (required for ST7789V)
+
     };
 };
 
