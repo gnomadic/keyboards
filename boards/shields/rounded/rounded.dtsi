@@ -132,9 +132,9 @@
         lcm = <0x2C>;
         colmod = <0x05>;
         gamma = <0x01>;
-        porch-param = [0x0C 0x0C 0x00 0x33 0x33];
-        cmd2en-param = [0x5A 0x69 0x02 0x01];
-        pwctrl1-param = [0xA4 0xA1];
+        porch-param = [0C 0C 00 33 33];
+        cmd2en-param = [5A 69 02 01];
+        pwctrl1-param = [A4 A1];
         ram-param = [0x00 0xF0];
         rgb-param = [0x00 0x00];
         mipi-mode = <0>;
