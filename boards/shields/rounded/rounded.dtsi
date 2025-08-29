@@ -117,10 +117,6 @@
         x-offset = <0>;
         y-offset = <0>;
         
-        // Color format settings
-        pixel-format = <1>; // RGB565
-        inversion-on;
-        
         // Rotation (adjust as needed for your mounting)
         rotation = <0>; // 0, 90, 180, or 270
         
