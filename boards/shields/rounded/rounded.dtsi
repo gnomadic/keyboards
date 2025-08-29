@@ -154,18 +154,3 @@
 &zephyr_udc0 {
     status = "okay";
 };
-
-
-       gctrl
-        mdac
-        lcm
-        colmod 
-        gamma
-        porch-param
-        cmd2en-param
-        pwctrl1-param
-        pvgam-param
-        nvgam-param
-        ram-param
-        rgb-param
-        spi-max-frequency
