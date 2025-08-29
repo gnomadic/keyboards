@@ -7,7 +7,7 @@
 
 / {
     chosen {
-        zephyr,display = &gc9a01;
+        zephyr,display = &st7789v;
         zmk,battery = &vbatt;
     };
 
@@ -97,8 +97,8 @@
     
     cs-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>; // D3 - CS
 
-    gc9a01: gc9a01@0 {
-        compatible = "sitronix,gc9a01";  // Using gc9a01 driver instead of GC9A01
+    st7789v: st7789v@0 {
+        compatible = "sitronix,st7789v";  // Using st7789v driver instead of GC9A01
         reg = <0>;
         spi-max-frequency = <24000000>; // 24MHz for stability
         
