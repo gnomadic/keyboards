@@ -130,7 +130,6 @@
         pwctrl1-param = [A4 A1];
         ram-param = [00 F0];
         rgb-param = [00 00];
-        mipi-mode = <0>;
 
         pvgam-param = [D0 04 0D 11 13 2B 3F 54 4C 18 0D 0B 1F 23];
 
