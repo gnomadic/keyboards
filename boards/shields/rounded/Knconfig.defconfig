@@ -1,7 +1,7 @@
 if SHIELD_ROUNDED
 
 config ZMK_KEYBOARD_NAME
-    default "Rounded Dongle"
+    default "Rounded"
 
 config ZMK_SPLIT
     default y
