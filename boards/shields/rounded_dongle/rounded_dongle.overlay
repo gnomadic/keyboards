@@ -1,0 +1,42 @@
+/*
+ * Copyright (c) 2024 ZMK Community
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+// Include the official Seeed XIAO Round Display shield
+#include <shields/seeed_xiao_round_display/seeed_xiao_round_display.dtsi>
+
+/ {
+    chosen {
+        zephyr,display = &gc9a01_xiao_round_display;
+        zmk,battery = &vbatt;
+    };
+
+    // Virtual matrix transform for dongle (no physical keys)
+    transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <1>;
+        rows = <1>;
+        map = <RC(0,0)>;
+    };
+
+    // Battery voltage monitoring
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 2>; // P0.31/AIN2 on XIAO
+        output-ohms = <2000000>;
+        full-ohms = <(2000000 + 806000)>;
+    };
+};
+
+// Enable ADC for battery monitoring
+&adc {
+    status = "okay";
+};
+
+// Configure the display (inherited from seeed_xiao_round_display.dtsi)
+&gc9a01_xiao_round_display {
+    status = "okay";
+};

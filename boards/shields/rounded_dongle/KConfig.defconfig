@@ -1,0 +1,21 @@
+if SHIELD_ROUNDED_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Round Dongle"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_DISPLAY
+    default y
+
+config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+    default y
+
+config ROUND_DISPLAY_STATUS
+    default y
+
+endif

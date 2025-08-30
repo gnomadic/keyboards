@@ -1,0 +1,28 @@
+# ZMK Round Display Status Module Configuration
+
+config ROUND_DISPLAY_STATUS
+    bool "Enable Round Display Status Module"
+    depends on ZMK_DISPLAY && LVGL
+    default n
+    help
+      Enable custom status display module for round displays.
+      Shows Hello World, battery status, and BLE connection info
+      optimized for 240x240 circular displays.
+
+if ROUND_DISPLAY_STATUS
+
+config ROUND_DISPLAY_UPDATE_INTERVAL
+    int "Display update interval in seconds"
+    default 5
+    help
+      How often to update the display content in seconds.
+      Lower values provide more responsive updates but use more power.
+
+config ROUND_DISPLAY_REFRESH_RATE
+    int "Display refresh rate in milliseconds"
+    default 50
+    help
+      How often to refresh the LVGL display in milliseconds.
+      50ms = 20 FPS. Lower values are smoother but use more power.
+
+endif

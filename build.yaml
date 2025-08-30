@@ -28,9 +28,9 @@ include:
 
   # # Xiao_Dongle Round
   - board: seeeduino_xiao_ble
-    shield: lily58_dongle_xiao dongle_display
+    shield: lily58_dongle_xiao rounded_dongle
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"lily58Dongle_X\" -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
-    artifact-name: xiao_lily58_dongle_xiao_round_oled
+    artifact-name: xiao_lily58_dongle_xiao_rounded
     snippet: studio-rpc-usb-uart
     
   # ### SETTINGS_RESET START ###
@@ -41,3 +41,9 @@ include:
     shield: settings_reset
     artifact-name: xiao_settings_reset
   # ### SETTINGS_RESET END ###
+
+
+  - board: xiao_ble/nrf52840
+    shield: rounded_dongle
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME="Round_Dongle"
+    artifact-name: round_dongle
