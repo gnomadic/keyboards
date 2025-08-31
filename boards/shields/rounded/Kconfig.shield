@@ -1,0 +1,4 @@
+
+config SHIELD_ROUNDED
+	def_bool $(shields_list_contains,rounded)
+	imply ZMK_DISPLAY
