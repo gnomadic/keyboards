@@ -26,7 +26,7 @@
     status = "okay";
     pinctrl-0 = <&spi1_default>;
     pinctrl-1 = <&spi1_sleep>;    /* satisfies the SPIM driver assertion */
-    pinctrl-names = "default, sleep";
+    pinctrl-names = "default", "sleep";
 
     gc9a01a: display@0 {
         compatible = "sitronix,gc9a01a";
