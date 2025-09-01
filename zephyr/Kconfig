@@ -1,0 +1,15 @@
+# zephyr/Kconfig
+# Round Display Module Configuration
+
+config ZMK_DISPLAY_ROUND
+    bool "Enable round display support"
+    depends on DISPLAY && SPI
+    select DISPLAY_GC9A01
+    help
+      Enable round display support with GC9A01 driver.
+
+config DISPLAY_GC9A01
+    bool "GC9A01 round display driver"
+    depends on DISPLAY && SPI
+    help
+      Enable the GC9A01 round display driver.
