@@ -4,18 +4,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Pete Johanson's module with GC9A01A support
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # Pete's module with VIK GC9A01A support
-    - name: sadekbaroudi-zmk-module
-      remote: petejohanson
-      revision: main
   self:
     path: config
     
