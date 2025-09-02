@@ -30,7 +30,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: lily58_dongle_xiao dongle_screen
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"lily58Dongle_X\" -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
-    artifact-name: xiao_lily58_dongle_xiao_screen
+    artifact-name: xiao_lily58_dongle_xiao_yads
     snippet: studio-rpc-usb-uart
     
   # ### SETTINGS_RESET START ###
