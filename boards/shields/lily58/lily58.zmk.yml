@@ -3,15 +3,14 @@ id: lily58
 name: Lily58
 type: shield
 url: https://github.com/kata0510/Lily58
-requires: [pro_micro]
-exposes: [i2c_oled]
+requires: [nice_nano_v2]
+exposes: [nice_view]
 features:
   - keys
   - display
   - studio
+  - dongle
 siblings:
   - lily58_left
   - lily58_right
-  - lily58_left_peripheral
   - lily58_dongle_xiao
-  - lily58_dongle_pro_micro
