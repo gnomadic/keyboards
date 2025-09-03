@@ -5,17 +5,12 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-
 #include <layouts/kata0510/lily58.dtsi>
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &kata0510_lily58_layout;
-    };
-
-    aliases {
-        arduinospi = &spi0;
     };
 
     default_transform: keymap_transform_0 {
@@ -38,22 +33,21 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
 
     mock_kscan: kscan_0 {
         compatible = "zmk,kscan-mock";
-        // wakeup-source;
         columns = <0>;
         rows = <0>;
         events = <0>;
     };
 
     left_encoder: encoder_left {
-    compatible = "alps,ec11";
-    a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    b-gpios = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    steps = <80>;
+        compatible = "alps,ec11";
+        a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
     };
 
     sensors {
-    	compatible = "zmk,keymap-sensors";
-    	sensors = <&left_encoder>;
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
         triggers-per-rotation = <20>;
     };
 };
