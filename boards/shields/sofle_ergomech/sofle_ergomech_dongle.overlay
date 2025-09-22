@@ -7,7 +7,6 @@
 
 #include "sofle_ergomech.dtsi"
 #include "sofle_ergomech-layouts.dtsi"
-#include "trackmouse.dtsi"
 / {
     chosen {
         zmk,kscan = &mock_kscan;
@@ -47,8 +46,3 @@
 &xiao_serial {
     status = "disabled";
 };
-
-&trackball_listener{
-        status = "okay";
-};
-
