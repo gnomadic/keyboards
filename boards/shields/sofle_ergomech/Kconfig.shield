@@ -9,8 +9,3 @@ config SHIELD_SOFLE_ERGOMECH_DONGLE
 
 config SHIELD_SOFLE_ERGOMECH_RIGHT
     def_bool $(shields_list_contains,sofle_ergomech_right)
-
-
-config SHIELD_SOFLE_ERGOMECH_MOUSE
-    def_bool $(shields_list_contains,sofle_ergomech_mouse)
-
