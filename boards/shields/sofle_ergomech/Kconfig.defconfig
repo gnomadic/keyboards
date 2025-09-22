@@ -15,6 +15,22 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 3
 
+config ZMK_POINTING
+    default y
+endif
+
+
+if SHIELD_SOFLE_ERGOMECH_MOUSE
+
+config SPI
+	default y
+
+config ZMK_POINTING
+    default y
+
+config ZMK_SPLIT
+    default y
+
 endif
 
 if SHIELD_SOFLE_ERGOMECH_LEFT || SHIELD_SOFLE_ERGOMECH_RIGHT
