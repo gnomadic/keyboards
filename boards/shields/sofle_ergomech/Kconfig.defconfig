@@ -20,19 +20,6 @@ config ZMK_POINTING
 endif
 
 
-if SHIELD_SOFLE_ERGOMECH_MOUSE
-
-config SPI
-	default y
-
-config ZMK_POINTING
-    default y
-
-config ZMK_SPLIT
-    default y
-
-endif
-
 if SHIELD_SOFLE_ERGOMECH_LEFT || SHIELD_SOFLE_ERGOMECH_RIGHT
 
 config ZMK_SPLIT
