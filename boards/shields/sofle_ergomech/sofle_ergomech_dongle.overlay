@@ -20,11 +20,6 @@
         events = <0>;
     };
 
-    sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&dummy_encoder>;
-        triggers-per-rotation = <20>;
-    };
         default_transform: keymap_transform_0 {
          compatible = "zmk,matrix-transform";
          columns = <12>;
@@ -42,6 +37,22 @@
 
 &dummy_encoder {
     status = "okay";
+};
+
+// Override left_encoder to use dummy configuration for dongle
+&left_encoder {
+    compatible = "alps,ec11";
+    a-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    steps = <80>;
+    status = "disabled";
+};
+
+// Override sensors to only use dummy encoder for dongle
+&sensors {
+    compatible = "zmk,keymap-sensors";
+    sensors = <&dummy_encoder>;
+    triggers-per-rotation = <20>;
 };
 
 &uart0 {
