@@ -55,7 +55,7 @@ include:
   # # Xiao_Dongle Screen
   - board: seeeduino_xiao_ble
     shield: sofle_ergomech_dongle dongle_screen
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000 -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: xiao_sofle_dongle_xiao_screen
     snippet: studio-rpc-usb-uart
 
