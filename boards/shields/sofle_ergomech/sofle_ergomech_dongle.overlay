@@ -7,7 +7,6 @@
 
 #include "sofle_ergomech.dtsi"
 #include "sofle_ergomech-layouts.dtsi"
-#include "trackmouse.dtsi"
 / {
     chosen {
         zmk,kscan = &mock_kscan;
@@ -20,6 +19,7 @@
         rows = <0>;
         events = <0>;
     };
+
         default_transform: keymap_transform_0 {
          compatible = "zmk,matrix-transform";
          columns = <12>;
@@ -31,13 +31,28 @@
  RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                 RC(3,6) RC(3,7) RC(3,8)  RC(3,9) RC(3,10) RC(3,11)                                    
      RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5) RC(4,6) RC(4,7) RC(4,8) RC(4,9)  RC(4,10)
                                                                  RC(5,6) RC(5,7) RC(5,8)  RC(5,9) RC(5,10)
- RC(6,0) RC(6,1) RC(6,2) RC(6,3) RC(6,4) RC(6,5)            
          >;
      };
 };
 
 &dummy_encoder {
     status = "okay";
+};
+
+// Override left_encoder to use dummy configuration for dongle
+&left_encoder {
+    compatible = "alps,ec11";
+    a-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    steps = <80>;
+    status = "disabled";
+};
+
+// Override sensors to only use dummy encoder for dongle
+&sensors {
+    compatible = "zmk,keymap-sensors";
+    sensors = <&dummy_encoder>;
+    triggers-per-rotation = <20>;
 };
 
 &uart0 {
@@ -47,8 +62,3 @@
 &xiao_serial {
     status = "disabled";
 };
-
-&trackball_listener{
-        status = "okay";
-};
-
