@@ -4,15 +4,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: janpfischer
-      url-base: https://github.com/janpfischer
+    - name: gnomadic
+      url-base: https://github.com/gnomadic
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-dongle-screen
-      remote: janpfischer
-      revision: main
+      remote: gnomadic
+      revision: colors
   self:
     path: config
