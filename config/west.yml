@@ -13,6 +13,6 @@ manifest:
       import: app/west.yml
     - name: zmk-dongle-screen
       remote: gnomadic
-      revision: colors
+      revision: bounding
   self:
     path: config
